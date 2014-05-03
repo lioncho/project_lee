@@ -17,7 +17,7 @@ public class SettingMainFragment extends Fragment implements IMainFragment {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		convertView = inflater.inflate(R.layout.fragment_setting, container);
+		convertView = inflater.inflate(R.layout.fragment_setting, container, false);
 		return convertView;
 	}
 	@Override

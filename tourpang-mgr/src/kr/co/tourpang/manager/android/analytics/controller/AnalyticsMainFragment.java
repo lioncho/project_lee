@@ -17,7 +17,7 @@ public class AnalyticsMainFragment extends Fragment implements IMainFragment {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		convertView = inflater.inflate(R.layout.fragment_analytics, container);
+		convertView = inflater.inflate(R.layout.fragment_analytics, container, false);
 		return convertView;
 	}
 

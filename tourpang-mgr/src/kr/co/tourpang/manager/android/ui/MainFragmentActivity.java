@@ -3,7 +3,6 @@ package kr.co.tourpang.manager.android.ui;
 import kr.co.tourpang.manager.android.R;
 import kr.co.tourpang.manager.android.ui.adapter.IMainFragment;
 import kr.co.tourpang.manager.android.ui.adapter.SectionsPagerAdapter;
-import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentTransaction;
@@ -11,13 +10,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.TabListener;
 import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-public class MainFragmentActivity extends ActionBarActivity implements
-		TabListener {
+public class MainFragmentActivity extends ActionBarActivity implements TabListener {
 
 	private ActionBar actionBar;
 	private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -70,8 +65,7 @@ public class MainFragmentActivity extends ActionBarActivity implements
 		public void onPageSelected(int position) {
 			actionBar.setSelectedNavigationItem(position);
 			actionBar.setTitle(mSectionsPagerAdapter.getPageTitle(position));
-			actionBar.setDisplayHomeAsUpEnabled(mSectionsPagerAdapter
-					.hasDepth(position));
+			actionBar.setDisplayHomeAsUpEnabled(mSectionsPagerAdapter.hasDepth(position));
 
 		}
 	};

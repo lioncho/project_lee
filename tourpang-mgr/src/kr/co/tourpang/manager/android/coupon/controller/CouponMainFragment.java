@@ -17,7 +17,7 @@ public class CouponMainFragment extends Fragment implements IMainFragment {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		convertView = inflater.inflate(R.layout.fragment_coupon, container);
+		convertView = inflater.inflate(R.layout.fragment_coupon, container, false);
 		return convertView;
 	}
 	
