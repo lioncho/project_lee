@@ -1,21 +1,31 @@
 package kr.co.tourpang.manager.android.account.controller;
 
 import kr.co.tourpang.manager.android.R;
+import kr.co.tourpang.manager.android.ui.AnimActivity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.view.Menu;
+import android.view.MenuItem;
 
-public class JoinActivity extends ActionBarActivity {
+public class JoinActivity extends AnimActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_login);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+		getSupportActionBar().setTitle("기업회원가입");
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+
+		if (item.getItemId() == android.R.id.home) {
+			finish();
+			return true;
+		}
+
+		return super.onOptionsItemSelected(item);
+	}
+	
 }

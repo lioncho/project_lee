@@ -9,13 +9,13 @@
         android:targetSdkVersion="19" />
 
     <application
+        android:name=".TPApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:name=".TPApplication" >
+        android:theme="@style/Theme.Tourpang" >
         <activity
-            android:name="kr.co.tourpang.manager.android.ui.MainFragmentActivity"
+            android:name="kr.co.tourpang.manager.android.ui.SplashActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="kr.co.tourpang.manager.android.account.controller.LoginActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="kr.co.tourpang.manager.android.account.controller.JoinActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="kr.co.tourpang.manager.android.account.controller.PartnerActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="kr.co.tourpang.manager.android.ui.MainFragmentActivity"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
