@@ -1,9 +1,0 @@
-/bin
-/gen
-/obj
-/proguard
-/.apt_generated
-.DS_Store
-*.a
-*.o
-
