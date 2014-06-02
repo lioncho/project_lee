@@ -1,9 +1,9 @@
 package kr.co.tourpang.manager.android.ui;
 
 import kr.co.tourpang.manager.android.R;
-import kr.co.tourpang.manager.android.account.controller.JoinActivity;
+import kr.co.tourpang.manager.android.account.controller.JoinForMarketActivity;
+import kr.co.tourpang.manager.android.account.controller.JoinForStoreActivity;
 import kr.co.tourpang.manager.android.account.controller.LoginActivity;
-import kr.co.tourpang.manager.android.account.controller.PartnerJoinActivity;
 import kr.co.tourpang.manager.android.helpers.AppConfiguration;
 import android.content.Intent;
 import android.os.Bundle;
@@ -91,13 +91,13 @@ public class SplashActivity extends AnimActivity implements OnClickListener {
 			}
 			
 			case R.id.cmd_join: {
-				Intent intent = new Intent(this, JoinActivity.class);
+				Intent intent = new Intent(this, JoinForStoreActivity.class);
 				startActivity(intent);
 				break;
 			}
 			
 			case R.id.cmd_partner_join: {
-				Intent intent = new Intent(this, PartnerJoinActivity.class);
+				Intent intent = new Intent(this, JoinForMarketActivity.class);
 				startActivity(intent);
 				break;
 			}

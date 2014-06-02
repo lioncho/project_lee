@@ -3,6 +3,7 @@ package kr.co.tourpang.manager.android.analytics.controller;
 import java.util.List;
 
 import kr.co.tourpang.manager.android.R;
+import kr.co.tourpang.manager.android.helpers.AppConfiguration;
 import kr.co.tourpang.manager.android.ui.adapter.IMainFragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class AnalyticsMainFragment extends Fragment implements IMainFragment {
 
@@ -18,6 +20,10 @@ public class AnalyticsMainFragment extends Fragment implements IMainFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		convertView = inflater.inflate(R.layout.fragment_analytics, container, false);
+
+        AppConfiguration conf = AppConfiguration.getInstance();
+        ((TextView) convertView.findViewById(R.id.display_name_lbl)).setText(conf.getUsername());
+
 		return convertView;
 	}
 

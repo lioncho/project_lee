@@ -29,12 +29,14 @@ public class AppConfiguration {
 	private String uid;
 	private String signname;
 	private String username;
+    private String password;
 	private boolean autologin;
 
 	private void refresh() {
 		this.uid = this.pm.getString("uid", "");
 		this.signname = this.pm.getString("signname", "");
 		this.username = this.pm.getString("username", "");
+        this.password = this.pm.getString("password", "");
 		this.autologin = this.pm.getBoolean("autologin", false);
 	}
 
@@ -44,6 +46,7 @@ public class AppConfiguration {
 		editor.putString("uid", uid);
 		editor.putString("signname", signname);
 		editor.putString("username", username);
+        editor.putString("password", password);
 		editor.putBoolean("autologin", autologin);
 		
 		editor.apply();
@@ -60,6 +63,7 @@ public class AppConfiguration {
 		this.uid = null;
 		this.signname = null;
 		this.username = null;
+        this.password = null;
 		this.autologin = false;
 
 		this.modified = false;
@@ -99,7 +103,16 @@ public class AppConfiguration {
 		this.modified = true;
 	}
 
-	public boolean isAutologin() {
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+        this.modified = true;
+    }
+
+    public boolean isAutologin() {
 		return autologin;
 	}
 
