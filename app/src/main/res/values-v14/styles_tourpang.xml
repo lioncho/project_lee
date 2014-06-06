@@ -20,18 +20,37 @@
 <resources>
 
     <style name="Theme.Tourpang" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:actionBarItemBackground">@drawable/selectable_background_tourpang</item>
         <item name="android:popupMenuStyle">@style/PopupMenu.Tourpang</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Tourpang</item>
-        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Tourpang</item>
-        <item name="android:actionDropDownStyle">@style/DropDownNav.Tourpang</item>
+
         <item name="android:actionBarStyle">@style/ActionBar.Solid.Tourpang</item>
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_tourpang</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Tourpang</item>
+        <item name="android:actionBarTabBarStyle">@style/ActionBarTabBarStyle.Tourpang</item>
+        <item name="android:actionBarTabTextStyle">@style/ActionBarTabTextStyle.Tourpang</item>
+
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Tourpang</item>
+
         <item name="android:actionModeBackground">@drawable/cab_background_top_tourpang</item>
         <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_tourpang</item>
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Tourpang</item>
-        
-                <!-- Light.DarkActionBar specific -->
+
         <item name="android:actionBarWidgetTheme">@style/Theme.Tourpang.Widget</item>
+        <!---->
+        <!---->
+        <!--<item name="android:actionBarItemBackground">@drawable/selectable_background_tourpang</item>-->
+        <!--<item name="android:popupMenuStyle">@style/PopupMenu.Tourpang</item>-->
+        <!--<item name="android:dropDownListViewStyle">@style/DropDownListView.Tourpang</item>-->
+        <!--<item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Tourpang</item>-->
+        <!--<item name="android:actionDropDownStyle">@style/DropDownNav.Tourpang</item>-->
+        <!--<item name="android:actionBarStyle">@style/ActionBar.Solid.Tourpang</item>-->
+        <!--<item name="android:actionModeBackground">@drawable/cab_background_top_tourpang</item>-->
+        <!--<item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_tourpang</item>-->
+        <!--<item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Tourpang</item>-->
+        <!---->
+                <!--&lt;!&ndash; Light.DarkActionBar specific &ndash;&gt;-->
+        <!--<item name="android:actionBarWidgetTheme">@style/Theme.Tourpang.Widget</item>-->
 
     </style>
 
@@ -40,6 +59,9 @@
         <item name="android:backgroundStacked">@drawable/ab_stacked_solid_tourpang</item>
         <item name="android:backgroundSplit">@drawable/ab_bottom_solid_tourpang</item>
         <item name="android:progressBarStyle">@style/ProgressBar.Tourpang</item>
+
+        <item name="titleTextStyle">@style/ActionBarTitleTextStyle.Tourpang</item>
+        <item name="subtitleTextStyle">@style/ActionBarSubTitleTextStyle.Tourpang</item>
     </style>
 
     <style name="ActionBar.Transparent.Tourpang" parent="@style/Widget.AppCompat.ActionBar">

@@ -45,6 +45,12 @@
         <activity
             android:name="kr.co.tourpang.manager.android.ui.MainFragmentActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name="kr.co.tourpang.manager.android.coupon.controller.CouponAddActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="kr.co.tourpang.manager.android.coupon.controller.CouponListActivity"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

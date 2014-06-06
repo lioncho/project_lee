@@ -8,6 +8,8 @@ import kr.co.tourpang.manager.android.ui.adapter.IMainFragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -30,8 +32,6 @@ public class CompanyMainFragment extends Fragment implements IMainFragment {
 		convertView = inflater.inflate(R.layout.fragment_company, container, false);
 
         AppConfiguration conf = AppConfiguration.getInstance();
-        ((TextView) convertView.findViewById(R.id.display_name_lbl)).setText(conf.getUsername());
-
 
         RequestParams params = new RequestParams();
         params.put("username", conf.getUid());
@@ -82,32 +82,34 @@ public class CompanyMainFragment extends Fragment implements IMainFragment {
         }
 
     };
-	
-	@Override
+
+    @Override
+    public int getPageIcon() {
+        return R.drawable.logo_company;
+    }
+
+    @Override
 	public String getTitle() {
-		// TODO Auto-generated method stub
 		return "기업정보";
 	}
 
 	@Override
 	public String getPageTitle() {
-		// TODO Auto-generated method stub
 		return "기업정보";
 	}
 
-	@Override
-	public int getIcon() {
-		return R.drawable.gray_company;
+    @Override
+    public String getPageDesc() {
+        AppConfiguration conf = AppConfiguration.getInstance();
+        return conf.getUsername();
+    }
 
-	}
+    @Override
+    public void getMenu(MenuInflater inflater, Menu menu) {
 
-	@Override
-	public List<ImageButton> getButtons() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    }
 
-	@Override
+    @Override
 	public boolean hasDepth() {
 		// TODO Auto-generated method stub
 		return false;

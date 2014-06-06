@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- File created by the Android Action Bar Style Generator
+<?xml version="1.0" encoding="utf-8"?><!-- File created by the Android Action Bar Style Generator
 
      Copyright (C) 2011 The Android Open Source Project
      Copyright (C) 2012 readyState Software Ltd
@@ -20,19 +19,23 @@
 <resources>
 
     <style name="Theme.Tourpang" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-        <item name="actionBarItemBackground">@drawable/selectable_background_tourpang</item>
         <item name="popupMenuStyle">@style/PopupMenu.Tourpang</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Tourpang</item>
-        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Tourpang</item>
-        <item name="actionDropDownStyle">@style/DropDownNav.Tourpang</item>
+
         <item name="actionBarStyle">@style/ActionBar.Solid.Tourpang</item>
+        <item name="actionBarItemBackground">@drawable/selectable_background_tourpang</item>
+        <item name="actionBarDivider">@null</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Tourpang</item>
+        <item name="actionBarTabBarStyle">@style/ActionBarTabBarStyle.Tourpang</item>
+        <item name="actionBarTabTextStyle">@style/ActionBarTabTextStyle.Tourpang</item>
+
+        <item name="actionDropDownStyle">@style/DropDownNav.Tourpang</item>
+
         <item name="actionModeBackground">@drawable/cab_background_top_tourpang</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_tourpang</item>
         <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Tourpang</item>
 
-                <!-- Light.DarkActionBar specific -->
         <item name="actionBarWidgetTheme">@style/Theme.Tourpang.Widget</item>
-
     </style>
 
     <style name="ActionBar.Solid.Tourpang" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
@@ -40,39 +43,78 @@
         <item name="backgroundStacked">@drawable/ab_stacked_solid_tourpang</item>
         <item name="backgroundSplit">@drawable/ab_bottom_solid_tourpang</item>
         <item name="progressBarStyle">@style/ProgressBar.Tourpang</item>
+
+        <item name="titleTextStyle">@style/ActionBarTitleTextStyle.Tourpang</item>
+        <item name="subtitleTextStyle">@style/ActionBarSubTitleTextStyle.Tourpang</item>
     </style>
 
     <style name="ActionBar.Transparent.Tourpang" parent="@style/Widget.AppCompat.ActionBar">
         <item name="background">@drawable/ab_transparent_tourpang</item>
         <item name="progressBarStyle">@style/ProgressBar.Tourpang</item>
     </style>
-	
-    <style name="PopupMenu.Tourpang" parent="@style/Widget.AppCompat.PopupMenu">	
-        <item name="android:popupBackground">@drawable/menu_dropdown_panel_tourpang</item>	
+
+    <style name="PopupMenu.Tourpang" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_tourpang</item>
     </style>
-	
+
     <style name="DropDownListView.Tourpang" parent="@style/Widget.AppCompat.ListView.DropDown">
         <item name="android:listSelector">@drawable/selectable_background_tourpang</item>
     </style>
 
+    <style name="ActionBarTitleTextStyle.Tourpang" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="ActionBarSubTitleTextStyle.Tourpang" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="ActionBarTabBarStyle.Tourpang" parent="@style/Widget.AppCompat.ActionBar.TabBar">
+        <item name="divider">@null</item>
+        <item name="showDividers">none</item>
+        <item name="dividerPadding">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:height">22dp</item>
+    </style>
+
+    <style name="ActionBarTabTextStyle.Tourpang" parent="@style/Widget.AppCompat.ActionBar.TabText">
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/tab_text_color</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:minHeight">0dip</item>
+        <item name="android:padding">0dp</item>
+        <item name="showDividers">none</item>
+    </style>
+
     <style name="ActionBarTabStyle.Tourpang" parent="@style/Widget.AppCompat.ActionBar.TabView">
         <item name="android:background">@drawable/tab_indicator_ab_tourpang</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:height">22dp</item>
+        <item name="android:minHeight">0dip</item>
+        <item name="paddingStart">0dp</item>
+        <item name="paddingEnd">0dp</item>
     </style>
-	
+
     <style name="DropDownNav.Tourpang" parent="@style/Widget.AppCompat.Spinner.DropDown.ActionBar">
         <item name="android:background">@drawable/spinner_background_ab_tourpang</item>
         <item name="android:popupBackground">@drawable/menu_dropdown_panel_tourpang</item>
         <item name="android:dropDownSelector">@drawable/selectable_background_tourpang</item>
     </style>
-    
+
     <style name="ProgressBar.Tourpang" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
         <item name="android:progressDrawable">@drawable/progress_horizontal_tourpang</item>
     </style>
-    
+
     <style name="ActionButton.CloseMode.Tourpang" parent="@style/Widget.AppCompat.ActionButton.CloseMode">
         <item name="android:background">@drawable/btn_cab_done_tourpang</item>
     </style>
-    
+
     <!-- this style is only referenced in a Light.DarkActionBar based theme -->
     <style name="Theme.Tourpang.Widget" parent="@style/Theme.AppCompat">
         <item name="popupMenuStyle">@style/PopupMenu.Tourpang</item>

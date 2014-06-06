@@ -8,6 +8,8 @@ import kr.co.tourpang.manager.android.ui.adapter.IMainFragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -29,28 +31,30 @@ public class AnalyticsMainFragment extends Fragment implements IMainFragment {
 
 	@Override
 	public String getTitle() {
-		// TODO Auto-generated method stub
 		return "쿠폰통계";
 	}
+
+    @Override
+    public int getPageIcon() {
+        return R.drawable.logo_static;
+    }
 
 	@Override
 	public String getPageTitle() {
-		// TODO Auto-generated method stub
 		return "쿠폰통계";
 	}
 
-	@Override
-	public int getIcon() {
-		return R.drawable.gray_statistics;
-	}
+    @Override
+    public String getPageDesc() {
+        return null;
+    }
 
-	@Override
-	public List<ImageButton> getButtons() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    @Override
+    public void getMenu(MenuInflater inflater, Menu menu) {
 
-	@Override
+    }
+
+    @Override
 	public boolean hasDepth() {
 		// TODO Auto-generated method stub
 		return false;
