@@ -24,7 +24,7 @@ public class AnalyticsMainFragment extends Fragment implements IMainFragment {
 		convertView = inflater.inflate(R.layout.fragment_analytics, container, false);
 
         AppConfiguration conf = AppConfiguration.getInstance();
-        ((TextView) convertView.findViewById(R.id.display_name_lbl)).setText(conf.getUsername());
+//        ((TextView) convertView.findViewById(R.id.display_name_lbl)).setText(conf.getUsername());
 
 		return convertView;
 	}

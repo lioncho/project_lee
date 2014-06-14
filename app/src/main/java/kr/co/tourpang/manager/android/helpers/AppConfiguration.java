@@ -26,30 +26,35 @@ public class AppConfiguration {
 		this.refresh();
 	}
 
+    private String id;
 	private String uid;
 	private String signname;
 	private String username;
     private String password;
+    private String langcode;
 	private boolean autologin;
 
 	private void refresh() {
+        this.id = this.pm.getString("id", "");
 		this.uid = this.pm.getString("uid", "");
 		this.signname = this.pm.getString("signname", "");
 		this.username = this.pm.getString("username", "");
         this.password = this.pm.getString("password", "");
+        this.langcode = this.pm.getString("langcode", "");
 		this.autologin = this.pm.getBoolean("autologin", false);
 	}
 
 	public void save() {
 		SharedPreferences.Editor editor = pm.edit();
 
+        editor.putString("id", id);
 		editor.putString("uid", uid);
 		editor.putString("signname", signname);
 		editor.putString("username", username);
         editor.putString("password", password);
+        editor.putString("langcode", langcode);
 		editor.putBoolean("autologin", autologin);
-		
-		editor.apply();
+
 		editor.commit();
 		this.modified = false;
 	}
@@ -60,10 +65,12 @@ public class AppConfiguration {
 		editor.clear();
 		editor.commit();
 
+        this.id = null;
 		this.uid = null;
 		this.signname = null;
 		this.username = null;
         this.password = null;
+        this.langcode = null;
 		this.autologin = false;
 
 		this.modified = false;
@@ -76,7 +83,16 @@ public class AppConfiguration {
 		this.modified = false;
 	}
 
-	public String getUid() {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+        this.modified = true;
+    }
+
+    public String getUid() {
 		return uid;
 	}
 
@@ -110,6 +126,14 @@ public class AppConfiguration {
     public void setPassword(String password) {
         this.password = password;
         this.modified = true;
+    }
+
+    public String getLangcode() {
+        return langcode;
+    }
+
+    public void setLangcode(String langcode) {
+        this.langcode = langcode;
     }
 
     public boolean isAutologin() {

@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:layout_weight="1"
-                    android:background="#3F000000"
+                    android:background="#BBFFFFFF"
                     android:padding="0dp"
                     android:textColor="#ffffff" />
             </LinearLayout>
@@ -124,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="0dp"
                     android:layout_weight="1"
-                    android:background="#3F000000"
+                    android:background="#BBFFFFFF"
                     android:padding="0dp"
                     android:textColor="#ffffff" />
             </LinearLayout>

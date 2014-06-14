@@ -10,7 +10,7 @@ import kr.co.tourpang.manager.android.R;
 import kr.co.tourpang.manager.android.account.controller.join.BasicFragment;
 import kr.co.tourpang.manager.android.account.controller.join.DetailFragment;
 import kr.co.tourpang.manager.android.account.controller.join.ExternFragment;
-import kr.co.tourpang.manager.android.account.controller.listeners.OnNextListener;
+import kr.co.tourpang.manager.android.account.listeners.OnNextListener;
 import kr.co.tourpang.manager.android.ui.AnimActivity;
 
 /**

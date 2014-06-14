@@ -16,8 +16,8 @@ import com.loopj.android.http.RequestParams;
 import org.json.JSONObject;
 
 import kr.co.tourpang.manager.android.R;
-import kr.co.tourpang.manager.android.account.controller.adpaters.RegionAdapter;
-import kr.co.tourpang.manager.android.account.controller.listeners.OnNextListener;
+import kr.co.tourpang.manager.android.account.adpaters.RegionAdapter;
+import kr.co.tourpang.manager.android.account.listeners.OnNextListener;
 
 public class BasicFragment extends Fragment implements View.OnClickListener {
 

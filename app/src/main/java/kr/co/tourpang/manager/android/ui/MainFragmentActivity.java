@@ -38,7 +38,6 @@ public class MainFragmentActivity extends ActionBarActivity implements ActionBar
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-
 		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
 		mViewPager = (ViewPager) findViewById(R.id.pager);

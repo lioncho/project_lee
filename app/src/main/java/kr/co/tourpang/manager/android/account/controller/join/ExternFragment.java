@@ -15,7 +15,7 @@ import com.loopj.android.http.RequestParams;
 import org.json.JSONObject;
 
 import kr.co.tourpang.manager.android.R;
-import kr.co.tourpang.manager.android.account.controller.listeners.OnNextListener;
+import kr.co.tourpang.manager.android.account.listeners.OnNextListener;
 
 public class ExternFragment extends Fragment implements View.OnClickListener {
 

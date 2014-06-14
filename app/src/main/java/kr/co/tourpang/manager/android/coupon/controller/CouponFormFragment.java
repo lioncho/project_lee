@@ -24,7 +24,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import kr.co.tourpang.manager.android.R;
-import kr.co.tourpang.manager.android.coupon.controller.adapters.UsableAdapter;
+import kr.co.tourpang.manager.android.coupon.adapters.UsableAdapter;
 import kr.co.tourpang.manager.android.helpers.AppConfiguration;
 
 public class CouponFormFragment extends Fragment implements View.OnClickListener {

@@ -1,4 +1,4 @@
-package kr.co.tourpang.manager.android.coupon.controller.adapters;
+package kr.co.tourpang.manager.android.account.adpaters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,15 +15,16 @@ import kr.co.tourpang.manager.android.R;
 /**
  * Created by mixon on 2014. 6. 2..
  */
-public class UsableAdapter extends BaseAdapter {
+public class LangAdapter extends BaseAdapter {
 
     private Context context;
-    private List<UsableVO> items;
-    public UsableAdapter(Context context) {
+    private List<LangVO> items;
+    public LangAdapter(Context context) {
         this.context = context;
-        this.items = new ArrayList<UsableVO>();
-        this.items.add(new UsableVO("IG", "이미지"));
-        this.items.add(new UsableVO("QR", "QR Code"));
+        this.items = new ArrayList<LangVO>();
+        this.items.add(new LangVO("ko", "한국어"));
+//        this.items.add("China (Simple)");
+//        this.items.add("Japan");
     }
 
     @Override
@@ -32,7 +33,7 @@ public class UsableAdapter extends BaseAdapter {
     }
 
     @Override
-    public UsableVO getItem(int i) {
+    public LangVO getItem(int i) {
         return this.items.get(i);
     }
 
@@ -53,21 +54,22 @@ public class UsableAdapter extends BaseAdapter {
         return convertView;
     }
 
-    public class UsableVO {
-        private String id;
+
+    public class LangVO {
+        private String langcode;
         private String label;
 
-        public UsableVO(String id, String label) {
-            this.id = id;
+        public LangVO(String langcode, String label) {
+            this.langcode = langcode;
             this.label = label;
         }
 
-        public String getId() {
-            return id;
+        public String getLangcode() {
+            return langcode;
         }
 
-        public void setId(String id) {
-            this.id = id;
+        public void setLangcode(String langcode) {
+            this.langcode = langcode;
         }
 
         public String getLabel() {

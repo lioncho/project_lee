@@ -1,12 +1,11 @@
 package kr.co.tourpang.manager.android.account.controller;
 
 import kr.co.tourpang.manager.android.R;
-import kr.co.tourpang.manager.android.account.controller.adpaters.LangAdapter;
-import kr.co.tourpang.manager.android.account.controller.adpaters.RegionAdapter;
+import kr.co.tourpang.manager.android.account.adpaters.LangAdapter;
+import kr.co.tourpang.manager.android.account.adpaters.RegionAdapter;
 import kr.co.tourpang.manager.android.helpers.AppConfiguration;
 import kr.co.tourpang.manager.android.ui.AnimActivity;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -33,6 +32,7 @@ public class LoginActivity extends AnimActivity implements OnClickListener {
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		findViewById(R.id.login_button).setOnClickListener(this);
+        findViewById(R.id.cancel_button).setOnClickListener(this);
 
         ((Spinner) findViewById(R.id.region_spinner)).setAdapter(new RegionAdapter(this));
         ((Spinner) findViewById(R.id.language_spinner)).setAdapter(new LangAdapter(this));
@@ -52,20 +52,23 @@ public class LoginActivity extends AnimActivity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.login_button:
-			
-			AppConfiguration.getInstance().setAutologin(((CheckBox) findViewById(R.id.cb_autologin)).isChecked());
-			this.visibleProgressDialog(true);
+            case R.id.login_button:
 
-            RequestParams params = new RequestParams();
-            params.put("username", gt(R.id.username));
-            params.put("password", gt(R.id.password));
+                AppConfiguration.getInstance().setAutologin(((CheckBox) findViewById(R.id.cb_autologin)).isChecked());
+                this.visibleProgressDialog(true);
 
-            AsyncHttpClient client = new AsyncHttpClient();
-            client.setTimeout(2000);
-            client.post(this, "http://tourcoupon.net/api/mgr_authorize/signin", params, onPostLoadComplete);
+                RequestParams params = new RequestParams();
+                params.put("username", gt(R.id.username));
+                params.put("password", gt(R.id.password));
 
-			break;
+                AsyncHttpClient client = new AsyncHttpClient();
+                client.setTimeout(2000);
+                client.post(this, "http://tourcoupon.net/api/mgr_authorize/signin", params, onPostLoadComplete);
+
+                break;
+            case R.id.cancel_button:
+                finish();
+                break;
 		}
 
 	}
@@ -83,10 +86,13 @@ public class LoginActivity extends AnimActivity implements OnClickListener {
                     visibleProgressDialog(false);
                 }
                 else {
+
                     AppConfiguration conf = AppConfiguration.getInstance();
+                    conf.setId(object.getJSONObject("data").getString("id"));
                     conf.setUid(gt(R.id.username));
                     conf.setPassword(gt(R.id.password));
                     conf.setUsername(object.getJSONObject("data").getString("display_name"));
+                    conf.setLangcode(((LangAdapter.LangVO) ((Spinner) findViewById(R.id.language_spinner)).getSelectedItem()).getLangcode());
                     conf.save();
 
                     LoginActivity.this.visibleProgressDialog(false);

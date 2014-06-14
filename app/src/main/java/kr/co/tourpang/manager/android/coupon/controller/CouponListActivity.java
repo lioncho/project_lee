@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kr.co.tourpang.manager.android.R;
-import kr.co.tourpang.manager.android.coupon.controller.adapters.CouponAdapter;
-import kr.co.tourpang.manager.android.coupon.controller.vo.CouponJSON;
+import kr.co.tourpang.manager.android.coupon.adapters.CouponAdapter;
+import kr.co.tourpang.manager.android.coupon.vo.CouponJSON;
 import kr.co.tourpang.manager.android.helpers.AppConfiguration;
 import kr.co.tourpang.manager.android.ui.AnimActivity;
 
@@ -49,8 +49,9 @@ public class CouponListActivity extends AnimActivity implements AdapterView.OnIt
         AppConfiguration conf = AppConfiguration.getInstance();
         RequestParams params = new RequestParams();
 
-        params.put("region", "ko");
         params.put("type", "all");
+        params.put("region", conf.getLangcode());
+        params.put("uid", conf.getId());
         params.put("u_username", conf.getUid());
         params.put("u_password", conf.getPassword());
 

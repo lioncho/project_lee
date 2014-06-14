@@ -35,7 +35,7 @@ public class AnimActivity extends ActionBarActivity {
 	
 	public void visibleProgressDialog(boolean visible) {
 		if (dialog != null) {
-			dialog.hide();
+			dialog.dismiss();
 			dialog = null;
 		}
 		if (visible) {

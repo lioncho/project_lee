@@ -1,4 +1,4 @@
-package kr.co.tourpang.manager.android.coupon.controller.adapters;
+package kr.co.tourpang.manager.android.coupon.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import kr.co.tourpang.manager.android.R;
-import kr.co.tourpang.manager.android.coupon.controller.vo.CouponJSON;
+import kr.co.tourpang.manager.android.coupon.vo.CouponJSON;
 
 /**
  * Created by mixon on 2014. 6. 3..

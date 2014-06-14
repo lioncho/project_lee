@@ -34,6 +34,8 @@ public class SplashActivity extends AnimActivity implements OnClickListener {
 		Handler mHandler = new Handler();
 		mHandler.postDelayed(mRunnable, 3000);
 
+        AppConfiguration.getInstance().settingRemoveAll();
+
 	}
 	
 	@Override

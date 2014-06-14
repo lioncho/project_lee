@@ -7,6 +7,7 @@ import kr.co.tourpang.manager.android.R;
 import kr.co.tourpang.manager.android.analytics.controller.AnalyticsMainFragment;
 import kr.co.tourpang.manager.android.company.controller.CompanyMainFragment;
 import kr.co.tourpang.manager.android.coupon.controller.CouponMainFragment;
+import kr.co.tourpang.manager.android.helpers.AppConfiguration;
 import kr.co.tourpang.manager.android.setting.controller.SettingMainFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,6 +22,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 	public SectionsPagerAdapter(FragmentManager fm) {
 		super(fm);
+
+        AppConfiguration conf = AppConfiguration.getInstance();
+
 		fragments.add(new CouponMainFragment());
 		fragments.add(new CompanyMainFragment());
 		fragments.add(new AnalyticsMainFragment());

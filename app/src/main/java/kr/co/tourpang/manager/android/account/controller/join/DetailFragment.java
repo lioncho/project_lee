@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +16,7 @@ import com.loopj.android.http.RequestParams;
 import org.json.JSONObject;
 
 import kr.co.tourpang.manager.android.R;
-import kr.co.tourpang.manager.android.account.controller.listeners.OnNextListener;
+import kr.co.tourpang.manager.android.account.listeners.OnNextListener;
 
 /**
  * Created by mixon on 2014. 6. 2..

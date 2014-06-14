@@ -1,4 +1,4 @@
-package kr.co.tourpang.manager.android.account.controller.adpaters;
+package kr.co.tourpang.manager.android.account.adpaters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,15 +15,15 @@ import kr.co.tourpang.manager.android.R;
 /**
  * Created by mixon on 2014. 6. 2..
  */
-public class LangAdapter extends BaseAdapter {
+public class RegionAdapter extends BaseAdapter {
 
     private Context context;
     private List<String> items;
-    public LangAdapter(Context context) {
+    public RegionAdapter(Context context) {
         this.context = context;
         this.items = new ArrayList<String>();
-        this.items.add("Korean");
-//        this.items.add("China (Simple)");
+        this.items.add("Korea");
+//        this.items.add("China");
 //        this.items.add("Japan");
     }
 

@@ -1,6 +1,5 @@
 package kr.co.tourpang.manager.android.coupon.controller;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
@@ -8,12 +7,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.PasswordTransformationMethod;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,7 +26,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import kr.co.tourpang.manager.android.R;
-import kr.co.tourpang.manager.android.coupon.controller.adapters.UsableAdapter;
+import kr.co.tourpang.manager.android.coupon.adapters.UsableAdapter;
 import kr.co.tourpang.manager.android.helpers.AppConfiguration;
 import kr.co.tourpang.manager.android.ui.AnimActivity;
 

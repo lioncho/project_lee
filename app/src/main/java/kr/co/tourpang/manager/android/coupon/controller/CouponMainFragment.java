@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kr.co.tourpang.manager.android.R;
-import kr.co.tourpang.manager.android.coupon.controller.adapters.CouponAdapter;
-import kr.co.tourpang.manager.android.coupon.controller.vo.CouponJSON;
+import kr.co.tourpang.manager.android.coupon.adapters.CouponAdapter;
+import kr.co.tourpang.manager.android.coupon.vo.CouponJSON;
 import kr.co.tourpang.manager.android.helpers.AppConfiguration;
 import kr.co.tourpang.manager.android.ui.adapter.IMainFragment;
 
@@ -19,11 +19,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;

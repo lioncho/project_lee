@@ -1,4 +1,4 @@
-package kr.co.tourpang.manager.android.coupon.controller.vo;
+package kr.co.tourpang.manager.android.coupon.vo;
 
 import org.json.JSONObject;
 
